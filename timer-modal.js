@@ -18,4 +18,4 @@ setTimeout(() => {
     if (feedbackModal) {
         feedbackModal.style.display = 'flex';
     }
-}, 60);
+}, 60000);
