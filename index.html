@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Anzhelika Kolomiiets</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        <style >
+        body.darkmode {
+            background-color: #1a1a1a !important;
+            color: #ffffff !important;
+        }
+
+        body.darkmode h1,
+        body.darkmode h3,
+        body.darkmode p,
+        body.darkmode li,
+        body.darkmode strong,
+        body.darkmode span,
+        body.darkmode .section-header,
+        body.darkmode .subtitle {
+            color: #ffffff !important;
+        }
+
+        body.darkmode .resume-page,
+        body.darkmode .left-column,
+        body.darkmode .right-column,
+        body.darkmode .info-group {
+            background-color: #1a1a1a !important;
+            border-color: #444 !important;
+        }
+        body.darkmode .thick-line {
+            background-color: #ffffff !important;
+        }
+
+        .theme-btn {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            color: black;
+            border-radius: 8px;
+        }
+
+        body.darkmode .modal-content {
+            background: #333 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-page">
+        <header class="main-header">
+            <div class="header-text">
+                <h1>Anzhelika Kolomiiets</h1>
+                <p class="subtitle">Студентка кібербезпеки</p>
+            </div>
+
+        </header>
+
+        <div class="resume-content">
+            <aside class="left-column">
+                <div class="photo-container">
+                    <img src="IMG_96862.jpg" alt="Anzhelika Kolomiiets" class="profile-photo">
+                </div>
+
+                <section class="info-group">
+                    <h3 class="section-header">ОСОБИСТІ ДАНІ</h3>
+                    <div class="thick-line"></div>
+                    <p>📍 м. Львів</p>
+                    <p>📞 +38 068 862 8327</p>
+                    <p>✉️ kolomiyetsanzhelika@gmail.com</p>
+                    <p>🎂 30.12.2005</p>
+                </section>
+
+                <section class="info-group">
+                    <h3 class="section-header">НАВИЧКИ</h3>
+                    <div class="thick-line"></div>
+                    <ul>
+                        <li>OSINT</li>
+                        <li>Бази даних (SQL)</li>
+                        <li>HTML / CSS</li>
+                        <li>Веб-дизайн</li>
+                    </ul>
+                </section>
+                <section class="info-group">
+                    <h3 class="section-header">МОВИ</h3>
+                    <div class="thick-line"></div>
+                    <ul>
+                        <li>Українська - Рідна</li>
+                        <li>Англійська - А2</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="right-column">
+                <section class="info-group">
+                    <h3 class="section-header">ПРО СЕБЕ</h3>
+                    <div class="thick-line"></div>
+                    <p>Студентка 3 курсу управління інформаційною безпекою. Цілеспрямована та відповідальна студентка, яка цікавиться програмуванням та веброзробкою. Маю базові навички роботи з HTML, CSS, PHP та базами даних. </p>
+                </section>
+
+                <section class="info-group">
+                    <h3 class="section-header">НАВЧАЛЬНІ ПРОЄКТИ</h3>
+                    <div class="thick-line"></div>
+                    <div class="exp-item">
+                        <span class="date">2024 - н.ч.</span>
+                        <div class="details">
+                            <strong>Навчальні проєкти</strong>
+                            <p>Розробка інтерфейсів на React та HTML/CSS. Робота з базами даних SQL та налаштування середовища розробки.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="info-group">
+                    <h3 class="section-header">ОСВІТА</h3>
+                    <div class="thick-line"></div>
+                    <div class="exp-item">
+                        <span class="date">2023 - 2027</span>
+                        <div class="details">
+                            <strong>Бакалавр "Кібербезпека та захист інформації"</strong>
+                            <p>Національний Університет "Львівська Політехніка"</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div> <footer id="site-footer">
+            <hr>
+            <p>© 2026 Anzhelika Kolomiiets</p>
+            <div id="user-info"></div>
+        </footer>
+    </div>
+
+    <script src="os.js"></script>
+    <button id="openModalBtn">Переглянути відгуки</button>
+
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-button">&times;</span>
+            <h2>Відгуки попередніх роботодавців</h2>
+            <div id="loader">Завантаження...</div>
+            <ul id="comments-list"></ul>
+        </div>
+    </div>
+
+    <script src="reviews.js"></script>
+
+    <div id="feedbackModal" class="modal-overlay">
+        <div class="modal-content new-feedback-design">
+            <span id="closeX" class="close-x">&times;</span>
+            <h2 class="form-title">Зворотній зв'язок</h2>
+
+            <form action="https://formspree.io/f/mwvrrldz" method="POST" class="new-form-layout">
+
+                <div class="form-group-v3">
+                    <label for="v3Name">Ім’я:</label>
+                    <input type="text" id="v3Name" name="name" required placeholder="Ім'я">
+                </div>
+
+                <div class="form-group-v3">
+                    <label for="v3Email">Email:</label>
+                    <input type="email" id="v3Email" name="email" required placeholder="Email">
+                </div>
+
+                <div class="form-group-v3">
+                    <label for="v3Phone">Номер телефону:</label>
+                    <input type="tel" id="v3Phone" name="phone" required placeholder="Номер телефону">
+                </div>
+
+                <div class="form-group-v3">
+                    <label for="v3Message">Повідомлення:</label>
+                    <textarea id="v3Message" name="message" rows="4" required placeholder="Ваш текст"></textarea>
+                </div>
+
+                <div class="form-buttons-v3">
+                    <button type="submit" class="btn-submit-v3">Відправити</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="timer-modal.js"></script>
+    <button id="theme-switch">Змінити тему</button>
+    <script src="darkmode.js"></script>
+</html>
